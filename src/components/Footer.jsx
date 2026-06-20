@@ -155,6 +155,11 @@ export function Footer() {
                   Contact Us
                 </button>
               </li>
+              <li>
+                <Link to="/privacy" className={footerNavLinkClass}>
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

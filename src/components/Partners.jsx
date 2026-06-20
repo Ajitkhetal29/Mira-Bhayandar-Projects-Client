@@ -15,14 +15,14 @@ export default function Partners() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mb-6 text-center md:mb-8">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold-ink">
-            Our Partners
+            Stronger Together 
           </p>
           <h2
             id="partners-heading"
             className="text-3xl tracking-tight text-navy md:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Partners
+            Our Developer Partners
           </h2>
         </header>
 

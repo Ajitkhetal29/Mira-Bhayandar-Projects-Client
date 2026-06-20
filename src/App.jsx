@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Blogs from "./pages/Blogs";
 import BlogDetail from "./pages/BlogDetail";
+import Privacy from "./pages/Privacy";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
               <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogs/:id" element={<BlogDetail />} />
+              <Route path="/privacy" element={<Privacy />} />
             </Route>
           </Routes>
         </div>
