@@ -22,7 +22,7 @@ export default function Partners() {
             className="text-3xl tracking-tight text-navy md:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Our Esteemed Partners
+            Our Esteemed Developers
           </h2>
         </header>
 
