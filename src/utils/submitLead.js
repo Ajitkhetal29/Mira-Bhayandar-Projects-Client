@@ -14,8 +14,27 @@ export async function submitLead(backendUrl, payload) {
     phone: payload.phone.trim(),
     message: payload.message.trim(),
   });
-  if (!data?.success) {
-    throw new Error(data?.message || "Could not send enquiry");
+
+  // Best-effort CRM sync — failure must not affect primary submit result
+  const delta_crm_url = "https://api.realtechmktg.com/api/digital-lead-assignment/sync";
+  try {
+    console.log("Sending data to delta_crm:", {
+      name: payload.name.trim(),
+      email: payload.email.trim(),
+      phone: payload.phone.trim(),
+      websiteName: "Mira Bhaynandar Properties",
+    });
+    const response = await axios.post(delta_crm_url, {
+      name: payload.name.trim(),
+      email: payload.email.trim(),
+      phone: payload.phone.trim(),
+      websiteName: "Mira Bhaynandar Properties",
+    });
+    // log the response
+    console.log("Response from delta_crm:", response.data);
+  } catch (error) {
+    console.error("Error sending data to delta_crm:", error);
   }
+
   return data;
 }
