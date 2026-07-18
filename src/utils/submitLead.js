@@ -21,13 +21,13 @@ export async function submitLead(backendUrl, payload) {
     console.log("Sending data to delta_crm:", {
       name: payload.name.trim(),
       email: payload.email.trim(),
-      phone: payload.phone.trim(),
+      contact: payload.phone.trim(),
       websiteName: "Mira Bhaynandar Properties",
     });
     const response = await axios.post(delta_crm_url, {
       name: payload.name.trim(),
       email: payload.email.trim(),
-      phone: payload.phone.trim(),
+      contact: payload.phone.trim(),
       websiteName: "Mira Bhaynandar Properties",
     });
     // log the response
