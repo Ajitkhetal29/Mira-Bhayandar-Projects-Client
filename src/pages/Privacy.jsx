@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 
 const META = [
@@ -173,7 +174,14 @@ export default function Privacy() {
                 traffic velocity.
               </li>
               <li>
-                Enforcing our structural Terms of Service and identifying fraudulent, malicious, or
+                Enforcing our structural{" "}
+                <Link
+                  to="/terms"
+                  className="text-gold-ink underline decoration-gold/40 underline-offset-2 transition-colors hover:text-gold"
+                >
+                  Terms of Service
+                </Link>{" "}
+                and identifying fraudulent, malicious, or
                 scraping behaviors.
               </li>
             </ul>

@@ -160,6 +160,11 @@ export function Footer() {
                   Privacy Policy
                 </Link>
               </li>
+              <li>
+                <Link to="/terms" className={footerNavLinkClass}>
+                  Terms &amp; Conditions
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
